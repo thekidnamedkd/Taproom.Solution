@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import { v4 } from "uuid";
 
 function KegAdd(props) {
-  function handleAddKegSubmission(event) {
+  function handleKegAddSubmission(event) {
     event.preventDefault();
-    props.onNewTicketCreation({
+    props.onKegAddCreation({
       kegName: event.target.kegName.value,
       kegBrand: event.target.kegBrand.value,
       kegPrice: event.target.kegPrice.value,
