@@ -1,8 +1,6 @@
-import React from 'react';
+import React from "react";
 import Header from "./Header";
 import KegController from "./KegController";
-
-import './App.css';
 
 function App() {
   return (

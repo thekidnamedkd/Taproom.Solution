@@ -10,8 +10,7 @@ class KegController extends React.Component {
     this.state = {
       formVisibleOnPage: false,
       masterKegList: [],
-      selectedKeg: null,
-      editing: false,
+      selectedKeg: null
     };
   }
 
@@ -36,11 +35,16 @@ class KegController extends React.Component {
     });
   };
 
+  handleChangingSelectedKeg = (kegId) => {
+    const selectedKeg = this.state.masterKegList.filter(keg => keg.kegId === kegId)[0];
+    this.setState({selectedKegt: selectedKeg});
+  };
+
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;
     if (this.state.formVisibleOnPage) {
-      currentlyVisibleState = <KegAdd />
+      currentlyVisibleState = <KegAdd onAddKegCreation={this.handleAddKegToList} />
       buttonText = "Return to Keg List";
     } else {
       currentlyVisibleState = <KegList />
