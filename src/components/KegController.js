@@ -6,9 +6,17 @@ import KegDetail from "./KegDetail";
 
 class KegController extends React.Component {
 
-constructor(props) {
-  super(props);
-  this.state = {
-    formVisibleOnPage: false
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      formVisibleOnPage: false
+    };
+  }
+
+  render(){
+    return (
+      <React.Fragment>
+      </React.Fragment>
+    );
+  }
 }
