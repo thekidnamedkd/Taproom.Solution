@@ -21,4 +21,5 @@ Keg.propTypes = {
   kegPrice: PropTypes.number,
   kegABV: PropTypes.number
 };
+
 export default Keg;
