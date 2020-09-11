@@ -43,16 +43,23 @@ class KegController extends React.Component {
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;
-    if (this.state.formVisibleOnPage) {
+
+    if (this.state.selectedKeg != null) {
+      currentlyVisibleState = <KegDetail keg = {this.state.selectedKeg} />
+      buttonText = "Return to Keg List";
+
+    } if (this.state.formVisibleOnPage) {
       currentlyVisibleState = <KegAdd onAddKegCreation={this.handleAddKegToList} />
       buttonText = "Return to Keg List";
+
     } else {
       currentlyVisibleState = <KegList />
       buttonText = "Add Keg";
     }
+
     return (
       <React.Fragment>
-        {currentlyVisibleState}
+        { currentlyVisibleState }
         <button onClick={this.handleClick}>{buttonText}</button> 
       </React.Fragment>
     );

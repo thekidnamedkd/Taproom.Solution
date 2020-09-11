@@ -1,70 +1,53 @@
+# _TAP ROOM_
+
+#### _React Week 2 Independent Project_
+
+#### By _**KEVIN DAVIS**_
+
+## Description
+
+_A tap room application to explore basic structures and functionality in React._
+
+## User Stories
+
+* As a user, I want to see a list/menu of all available kegs. For each keg, I want to see its name, brand, price and alcoholContent (or perhaps something like flavor for a kombucha store).
+* As a user, I want to submit a form to add a new keg to a list.
+* As a user, I want to be able to click on a keg to see its detail page.
+* As a user, I want to see how many pints are left in a keg.
+* As a user, I want to be able to click a button next to a keg whenever I sell a pint of it. This should decrease the number of pints left by 1. Pints should not be able to go below 0.
+
+## Component Diagram
 ![image](https://i.ibb.co/fp9bSPp/taproom-component.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Setup/Installation Requirements
 
-## Available Scripts
+* _Visit the following link: https://github.com/thekidnamedkd/Taproom.Solution_
+* _Clone the repository to your desired directory._
+* _Navigate into the director Taproom.Solution, then taproom._
+* _Type ```npm start``` to see the application boot in to your default browser._
 
-In the project directory, you can run:
+## Known Bugs
 
-### `npm start`
+_No known bugs at this time._
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Support and contact details
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+_For questions, comments, or collaboration contact me at thekidnamedkd@gmail.com_
 
-### `npm test`
+## Technologies Used
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* _HTML_
+* _CSS_
+* _JavaScript_
+* _React_
+* _Bootstrap_
+* _NPM_
+* _Jest_
+* _Babel_
+* _ESlint_
 
-### `npm run build`
+### License
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+*GPL license distribution*
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Copyright (c) 2020 **_Kevin Davis_**
