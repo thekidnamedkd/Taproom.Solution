@@ -1,6 +1,4 @@
-![image](~/taproom/images/TAPROOMAPP.jpg)
-
-![hello](~/taproom/images/TAPROOMAPP.png)
+![image](./taproom/img/TAPROOMAPP.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
