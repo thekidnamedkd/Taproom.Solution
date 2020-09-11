@@ -1,4 +1,4 @@
-![image](https://i.ibb.co/N762tqy/taproom-map.png)
+![image](https://i.ibb.co/fp9bSPp/taproom-component.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
