@@ -14,8 +14,15 @@ class KegController extends React.Component {
   }
 
   render(){
+    let currentlyVisibleState = null;
+    if (this.state.formVisibleOnPage) {
+      currentlyVisibleState = <KegAdd />
+    } else {
+      currentlyVisibleState = <KegList />
+    }
     return (
       <React.Fragment>
+        {currentlyVisibleState}
       </React.Fragment>
     );
   }
