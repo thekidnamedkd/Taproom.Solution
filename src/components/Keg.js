@@ -6,9 +6,9 @@ function Keg(props){
     <React.Fragment>
       <h3>{props.kegName} - </h3>
       <ul>
-        <li>{props.kegBrand}</li>
-        <li>{props.kegPrice}</li>
-        <li>{props.kegABV}</li>
+        <li><strong>Brand:</strong> {props.kegBrand}</li>
+        <li><strong>Pint Price:</strong> {props.kegPrice}</li>
+        <li><strong>ABV:</strong> {props.kegABV}</li>
       </ul>
       <hr/>
     </React.Fragment>
