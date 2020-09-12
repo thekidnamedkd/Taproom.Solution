@@ -24,6 +24,7 @@ _A tap room application to explore basic structures and functionality in React._
 * _Visit the following link: https://github.com/thekidnamedkd/Taproom.Solution_
 * _Clone the repository to your desired directory._
 * _Navigate into the director Taproom.Solution, then taproom._
+* _Once in taproom run the command ```npm install`` to install all necessary dependencies._
 * _Type ```npm start``` to see the application boot in to your default browser._
 
 ## Known Bugs
