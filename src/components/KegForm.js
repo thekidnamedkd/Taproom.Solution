@@ -5,9 +5,10 @@ function KegForm(props) {
   return (
     <React.Fragment>
       <form onSubmit={props.formSubmissionHandler}>
-        <input type='text' name='names' placeholder='Pair Names' />
-        <input type='text' name='location' placeholder='Location' />
-        <textarea name='issue' placeholder='Describe your issue.' />
+        <input type='text' name='kegName' placeholder='Name...' />
+        <input type='text' name='kegBrand' placeholder='Brand...' />
+        <input type='number' name='kegPrice' placeholder='Price...' />
+        <input type='number' name='kegABV' placeholder='ABV...' />
         <button type='submit'>{props.buttonText}</button>
       </form>
     </React.Fragment>

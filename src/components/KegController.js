@@ -26,6 +26,11 @@ class KegController extends React.Component {
     }
   };
 
+  handleChangingSelectedKeg = (kegId) => {
+    const selectedKeg = this.state.masterKegList.filter(keg => keg.kegId === kegId)[0];
+    this.setState({selectedKeg: selectedKeg});
+  };
+
   handleAddKegToList = (newKeg) => {
     const newMasterKegList = this.state.masterKegList.concat(newKeg);
     this.setState({
@@ -34,25 +39,34 @@ class KegController extends React.Component {
     });
   };
 
-  handleChangingSelectedKeg = (kegId) => {
-    const selectedKeg = this.state.masterKegList.filter(keg => keg.kegId === kegId)[0];
-    this.setState({selectedKegt: selectedKeg});
-  };
-
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;
 
     if (this.state.selectedKeg != null) {
-      currentlyVisibleState = <KegDetail keg = {this.state.selectedKeg} />
+      currentlyVisibleState = (
+      <KegDetail 
+        keg = {this.state.selectedKeg} 
+      />
+      );
       buttonText = "Return to Keg List";
 
-    } if (this.state.formVisibleOnPage) {
-      currentlyVisibleState = <KegAdd onAddKegCreation={this.handleAddKegToList} />
+
+    } else if (this.state.formVisibleOnPage) {
+      currentlyVisibleState = (
+        <KegAdd 
+          onKegAddCreation={this.handleAddKegToList} 
+        />
+      );
       buttonText = "Return to Keg List";
 
     } else {
-      currentlyVisibleState = <KegList />
+      currentlyVisibleState = ( 
+        <KegList 
+          kegList={this.state.masterKegList}
+          onKegSelection={this.handleChangingSelectedKeg}
+        />
+      );
       buttonText = "Add Keg";
     }
 
