@@ -11,7 +11,7 @@ function KegAdd(props) {
       kegBrand: event.target.kegBrand.value,
       kegPrice: event.target.kegPrice.value,
       kegABV: event.target.kegABV.value,
-      id: v4()
+      kegId: v4()
     });
   }
   return (

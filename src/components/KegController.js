@@ -17,7 +17,7 @@ class KegController extends React.Component {
     if (this.state.selectedKeg != null) {
       this.setState({
         formVisibleOnPage: false,
-        selectedKeg: null,
+        selectedKeg: null
       });
     } else {
       this.setState((prevState) => ({
@@ -35,7 +35,7 @@ class KegController extends React.Component {
     const newMasterKegList = this.state.masterKegList.concat(newKeg);
     this.setState({
       masterKegList: newMasterKegList,
-      formVisibleOnPage: false,
+      formVisibleOnPage: false
     });
   };
 
@@ -50,7 +50,6 @@ class KegController extends React.Component {
       />
       );
       buttonText = "Return to Keg List";
-
 
     } else if (this.state.formVisibleOnPage) {
       currentlyVisibleState = (
