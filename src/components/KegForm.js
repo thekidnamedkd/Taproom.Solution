@@ -9,6 +9,7 @@ function KegForm(props) {
         <input type='text' name='kegBrand' placeholder='Brand...' />
         <input type='number' name='kegPrice' placeholder='Price...' />
         <input type='number' name='kegABV' placeholder='ABV...' />
+        <input type='number' name='kegAmt' value="124" />
         <button type='submit'>{props.buttonText}</button>
       </form>
     </React.Fragment>
