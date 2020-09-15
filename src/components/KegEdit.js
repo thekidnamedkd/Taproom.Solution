@@ -12,7 +12,8 @@ function KegEdit (props) {
       kegBrand: event.target.kegBrand.value,
       kegPrice: event.target.kegPrice.value,
       kegABV: event.target.kegABV.value,
-      kegAmt: event.target.kegAmt.value
+      kegAmt: event.target.kegAmt.value,
+      kegId: keg.kegID
     });
   }
   

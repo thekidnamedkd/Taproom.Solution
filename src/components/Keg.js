@@ -10,21 +10,24 @@ function Keg(props){
           <li><strong>Brand:</strong> {props.kegBrand}</li>
           <li><strong>Pint Price:</strong> {props.kegPrice}</li>
           <li><strong>ABV:</strong> {props.kegABV}</li>
+          <li><strong>Pints Left:</strong> {props.kegAmt}</li>
         </ul>
       </div>
+      <button onClick={ props.onClickingSold }>Pint Sold</button>
       <hr />
-    </React.Fragment>
+      </React.Fragment>
   );
 }
 
 Keg.propTypes = {
-  kegName: PropTypes.string.isRequired,
-  kegBrand: PropTypes.string.isRequired,
-  kegPrice: PropTypes.number.isRequired,
-  kegABV: PropTypes.number.isRequired,
+  kegName: PropTypes.string,
+  kegBrand: PropTypes.string,
+  kegPrice: PropTypes.number,
+  kegABV: PropTypes.number,
   kegAmt: PropTypes.number,
   kegId: PropTypes.string,
-  whenKegClicked: PropTypes.func
+  whenKegClicked: PropTypes.func,
+  onClickingSold: PropTypes.func
 };
 
 export default Keg;
