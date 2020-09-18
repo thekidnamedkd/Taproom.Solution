@@ -5,12 +5,13 @@ function KegDetail(props){
   const { keg, onClickingDelete, onPintSold } = props;
   return (
     <React.Fragment>
-      <h1>Keg Details</h1>
-        <h3>Beverage Name: {keg.kegName}</h3>
-        <h3>Brand: {keg.kegBrand}</h3>
-        <h3>Price: {keg.kegPrice}</h3>
-        <h3>ABV: {keg.kegABV}</h3>
-        <h3>Pints Left: {keg.kegAmt}</h3>
+      <h3> {keg.kegName} Details</h3>
+      <ul>
+        <li>Brand: {keg.kegBrand}</li>
+        <li>Price: {keg.kegPrice}</li>
+        <li>ABV: {keg.kegABV}</li>
+        <li>Pints Left: {keg.kegAmt}</li>
+      </ul>
       <hr/>
       <button onClick = {() => onPintSold(keg.kegId)}>Pint Sold</button>
       <hr />
