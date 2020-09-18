@@ -49,10 +49,10 @@ class KegController extends React.Component {
       selectedKeg: null
     });
   }
-  handlePintSold = (kegToEdit) => {
+  handlePintSold = (pintToSell) => {
     const editedMasterKegList = this.state.masterKegList
       .filter(keg => keg.kegId !== this.state.selectedKeg.kegId)
-      .concat(kegToEdit);
+      .concat(pintToSell);
     this.setState({
       masterKegList: editedMasterKegList,
       editing: false,
@@ -64,10 +64,10 @@ class KegController extends React.Component {
     this.setState({editing: true});
   }
 
-  handleEditingKeg = (pintoToSell) => {
+  handleEditingKeg = (kegToEdit) => {
     const editedMasterKegList = this.state.masterKegList
       .filter(keg => keg.kegId !== this.state.selectedKeg.kegId)
-      .concat(pintoToSell);
+      .concat(kegToEdit);
     this.setState({
       masterKegList: editedMasterKegList,
       editing: false,
