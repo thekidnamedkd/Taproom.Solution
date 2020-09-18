@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import PintSold from "./PintSold";
+// import PintSold from "./PintSold";
 
 function Keg(props){
   return (
@@ -14,7 +14,7 @@ function Keg(props){
           <li><strong>Pints Left:</strong> {props.kegAmt}</li>
         </ul>
       </div>
-      <button onClick={ PintSold }>Pint Sold</button>
+      <button onClick = {() => props.whenPintSold(props.kegId)}>Pint Sold</button>
       <hr />
       </React.Fragment>
   );
@@ -28,7 +28,7 @@ Keg.propTypes = {
   kegAmt: PropTypes.number,
   kegId: PropTypes.string,
   whenKegClicked: PropTypes.func,
-  onClickingSold: PropTypes.func
+  whenPintSold: PropTypes.func
 };
 
 export default Keg;

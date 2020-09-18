@@ -10,9 +10,9 @@ function KegEdit (props) {
     props.onKegEdit({
       kegName: event.target.kegName.value,
       kegBrand: event.target.kegBrand.value,
-      kegPrice: event.target.kegPrice.value,
-      kegABV: event.target.kegABV.value,
-      kegAmt: event.target.kegAmt.value,
+      kegPrice: parseInt(event.target.kegPrice.value),
+      kegABV: parseInt(event.target.kegABV.value),
+      kegAmt: parseInt(event.target.kegAmt.value),
       kegId: keg.kegID
     });
   }
