@@ -7,9 +7,9 @@ function KegForm(props) {
       <form onSubmit={props.formSubmissionHandler}>
         <input type='text' name='kegName' placeholder='Name...' />
         <input type='text' name='kegBrand' placeholder='Brand...' />
-        <input type='number' name='kegPrice' placeholder='Price...' />
-        <input type='number' name='kegABV' placeholder='ABV...' />
-        <input type='number' name='kegAmt' placeholder='124...'/>
+        <input type='number' step='0.01' name='kegPrice' placeholder='Price...' />
+        <input type='number' step='0.01' name='kegABV' placeholder='ABV...' />
+        <input type='number' step='0.01' name='kegAmt' placeholder='124...'/>
         <button type='submit'>{props.buttonText}</button>
       </form>
     </React.Fragment>
