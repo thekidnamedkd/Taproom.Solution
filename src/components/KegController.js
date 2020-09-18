@@ -30,14 +30,16 @@ class KegController extends React.Component {
   };
 
   handleChangingSelectedKeg = (kegId) => {
-    const selectedKeg = this.state.masterKegList.filter(keg => keg.kegId === kegId)[0];
+    const selectedKeg = this.state.masterKegList
+      .filter(keg => keg.kegId === kegId)[0];
     this.setState({
       selectedKeg: selectedKeg
     });
   };
 
   handleAddKegToList = (newKeg) => {
-    const newMasterKegList = this.state.masterKegList.concat(newKeg);
+    const newMasterKegList = this.state.masterKegList
+    .concat(newKeg);
     this.setState({
       masterKegList: newMasterKegList,
       formVisibleOnPage: false
@@ -45,18 +47,25 @@ class KegController extends React.Component {
   };
 
   handleDeletingKeg = (kegId) => {
-    const newMasterKegList = this.state.masterKegList.filter(keg => keg.kegId !== kegId);
+    const newMasterKegList = this.state.masterKegList
+      .filter(keg => keg.kegId !== kegId);
     this.setState({
       masterKegList: newMasterKegList,
       selectedKeg: null
     });
   }
   handlePintSold = (kegId) => {
-    const selectedKeg = this.state.masterKegList.filter(keg => keg.kegId === kegId);
+    const keg = this.state.masterKegList.filter(keg => keg.kegId === kegId)[0];
+    if (keg.kegAmt > 0) {
+      keg.kegAmt --;
+    }
+    const editedMasterKegList = this.state.masterKegList
+      .filter(keg => keg.kegId !== this.state.selectedKeg.kegId)
+      .concat(keg);
     this.setState({
-      selectedKeg: selectedKeg
+      masterKegList: editedMasterKegList
     });
-  };
+  } 
 
 
   handleEditClick = () => {
