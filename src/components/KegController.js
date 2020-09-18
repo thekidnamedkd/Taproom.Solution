@@ -54,19 +54,22 @@ class KegController extends React.Component {
       selectedKeg: null
     });
   }
+
   handlePintSold = (kegId) => {
-    const keg = this.state.masterKegList.filter(keg => keg.kegId === kegId)[0];
-    if (keg.kegAmt > 0) {
-      keg.kegAmt --;
+    const pintsLeft = this.state.masterKegList
+      .filter(pintsLeft => pintsLeft.kegId === kegId)[0];
+    if (pintsLeft.kegAmt > 0) {
+      pintsLeft.kegAmt --;
     }
     const editedMasterKegList = this.state.masterKegList
-      .filter(keg => keg.kegId !== this.state.selectedKeg.kegId)
-      .concat(keg);
+      .filter(pintsLeft => pintsLeft.kegId !== this.state.selectedKeg.kegId)
+      .concat(pintsLeft);
     this.setState({
-      masterKegList: editedMasterKegList
+      masterKegList: editedMasterKegList,
+      editing: false,
+      selectedKeg: null
     });
   } 
-
 
   handleEditClick = () => {
     this.setState({editing: true});
@@ -101,8 +104,8 @@ class KegController extends React.Component {
       <KegDetail 
         keg = {this.state.selectedKeg}
         onClickingDelete = {this.handleDeletingKeg}
-        onClickingSold = {this.handlePintSold}
         onClickingEdit = {this.handleEditClick}
+        onPintSold={this.handlePintSold}
       />
       );
       buttonText = "Return to Keg List";
@@ -121,7 +124,6 @@ class KegController extends React.Component {
           keg = {this.state.selectedKeg}
           kegList={this.state.masterKegList}
           onKegSelection={this.handleChangingSelectedKeg}
-          onPintSale={this.handlePintSold}
         />
       );
       buttonText = "Add Keg";
